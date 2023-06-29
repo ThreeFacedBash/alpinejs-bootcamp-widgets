@@ -13,7 +13,7 @@ function greetFunc(neighbourID,lang) {
         greetMsg = 'Hello there, ' + neighbourID
     }
     else{
-        greetMsg =   'Please select a language' ;
+        greetMsg =   'Please select a language first' ;
     }
     return greetMsg;
 }

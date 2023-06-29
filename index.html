@@ -33,7 +33,10 @@
             <div x-data="greet">
                 <h2 style="text-align: center;">Multi-lingual greeting</h2>
                     <p>Insert your name, select a language, click the "Greet" button and a welcome message will pop-up in your language of choice</p>
-                   
+                   <div style="background-color: gray; color: white; padding: 0.5em; ">
+                   <strong><span>View your greeting here: </span></strong>  <span x-text="greetMsg"></span>
+                   </div>
+                   <br>
                     <input type="text" x-model="username" placeholder="Type your name...">
                             <button  @click="greetMe">Greet</button>
                             <span>
@@ -115,7 +118,7 @@
         <div style="border: solid; border-radius: 1em; padding: 2em; background-color: #f1faee; margin-bottom: 1em;">
             <div x-data="{
                 usageOfAirtime:'',
-                availableAirtime:'',
+                availableAirtime: 0,
                 calculate:'',
                 endCalculation(){
                     this.calculate = enoughAirtime(this.usageOfAirtime, this.availableAirtime)

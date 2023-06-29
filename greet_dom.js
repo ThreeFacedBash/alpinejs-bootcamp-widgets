@@ -4,11 +4,11 @@ document.addEventListener('alpine:init', function () {
         return {
             username: '',
             langType: '',
-
+            greetMsg:'',
+            
             greetMe() {
-                const greetMsg = greetFunc(this.username, this.langType)
-                console.log(greetMsg);
-                alert(greetMsg)
+                this.greetMsg = greetFunc(this.username, this.langType)
+                console.log(this.greetMsg);
             },
         }
     });

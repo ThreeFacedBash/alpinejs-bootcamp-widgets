@@ -9,6 +9,10 @@ function totalPhoneBill(sentItems){
             else if(loopedSentItems == "sms"){
                    outboundBill += 0.65
             }
+            else if(loopedSentItems != "sms" || loopedSentItems != "call"  ){
+              return "Please enter valid input"
+       }
+            
       }
     return "R" + outboundBill.toFixed(2)
       

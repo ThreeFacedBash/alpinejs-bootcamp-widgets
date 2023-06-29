@@ -1,5 +1,5 @@
 function enoughAirtime(usageOfAirtime, availableAirtime){
-    usageOfAirtime = usageOfAirtime.split(',');
+    usageOfAirtime = usageOfAirtime.split(', ');
      var usedAirtime = 0;
       for (let i = 0; i<usageOfAirtime.length; i++){
             var loopedUsageOfAirtime = usageOfAirtime[i]
