@@ -13,7 +13,7 @@
     <script src="./bootcampFunctions/greet.js"></script>
     <script defer src="./greet_dom.js"></script>
 
-    <script src="transportFee.js" defer></script>   
+    <script src="transportFee.js" defer></script>
 
     <script src="totalPhoneBill.js" defer></script>
 
@@ -25,42 +25,44 @@
 
 <body style="background-color: #a8dadc;">
     <br><br>
-<div class="container text-align">
-        
+    <div class="container text-align">
+
         <h1 style="text-align: center;">AlpineJS widgets for various functions</h1>
-        <hr style="background: linear-gradient(to right, black, black 33%, white 33%, white 67%, black 67%); height: 5px; border: none;">
+        <hr
+            style="background: linear-gradient(to right, black, black 33%, white 33%, white 67%, black 67%); height: 5px; border: none;">
         <div style="border: solid; border-radius: 1em; padding: 2em; background-color: #f1faee; margin-bottom: 1em;">
             <div x-data="greet">
                 <h2 style="text-align: center;">Multi-lingual greeting</h2>
-                    <p>Insert your name, select a language, click the "Greet" button and a welcome message will pop-up in your language of choice</p>
-                   <div style="background-color: gray; color: white; padding: 0.5em; ">
-                   <strong><span>View your greeting here: </span></strong>  <span x-text="greetMsg"></span>
-                   </div>
-                   <br>
-                    <input type="text" x-model="username" placeholder="Type your name...">
-                            <button  @click="greetMe">Greet</button>
-                            <span>
-                                <label for="English" >English</label>
-                       
-                                <input type="radio" id="English" value="English" x-model="langType">
-    
-                                <label for="isiZulu">isiZulu</label>
-                    
-                                <input type="radio" id="isiZulu"  value="isiZulu" x-model="langType">
-        
-                                <label for="French">French</label>
-                       
-                                <input type="radio" id="French" value="French" x-model="langType">
+                <p>Insert your name, select a language, click the "Greet" button and a welcome message will pop-up in
+                    your language of choice</p>
+                <div style="background-color: gray; color: white; padding: 0.5em; ">
+                    <strong><span>View your greeting here: </span></strong> <span x-text="greetMsg"></span>
+                </div>
+                <br>
+                <input type="text" x-model="username" placeholder="Type your name...">
+                <button @click="greetMe">Greet</button>
+                <span>
+                    <label for="English">English</label>
 
-                                <label for="Mandarin">Mandarin</label>
-                       
-                                <input type="radio" id="Mandarin" value="Mandarin" x-model="langType">
-                                
-                            </span>
-    
+                    <input type="radio" id="English" value="English" x-model="langType">
+
+                    <label for="isiZulu">isiZulu</label>
+
+                    <input type="radio" id="isiZulu" value="isiZulu" x-model="langType">
+
+                    <label for="French">French</label>
+
+                    <input type="radio" id="French" value="French" x-model="langType">
+
+                    <label for="Mandarin">Mandarin</label>
+
+                    <input type="radio" id="Mandarin" value="Mandarin" x-model="langType">
+
+                </span>
+
             </div>
         </div>
-        
+
         <div style="border: solid; border-radius: 1em; padding: 2em; background-color: #f1faee; margin-bottom: 1em;">
             <div x-data="{
                 shiftTime: '',
@@ -71,27 +73,27 @@
                     console.log(currentFare);
                 }
             }">
-            <h2 style="text-align: center;">Calculating travelling costs</h2>
-            <p>
-                The transport fees for health care workers vary based on the commencement time of their shifts
-            </p>
-            <div style="background-color: gray; color: white; padding: 0.5em; ">
-               <strong><span>Transport fee: </span></strong> 
-                <span x-text="fare"></span>
-            </div>
-            <br>
-            <button @click="calculateFare">Calculate Fare</button><br>
-            <span >
-                
-                <label for="morningShift">Morning Shift</label>
-                <input type="radio" name="morningShift" value="morning" id="morningShift" x-model="shiftTime" >
-    
-                <label for="afternoonShift">Afternoon Shift</label>
-                <input type="radio" name="afternoonShift" value="afternoon" id="afternoonShift" x-model="shiftTime" >
-    
-                <label for="nightShift">Night Shift</label>
-                <input type="radio" name="nightShift" id="nightShift" value="nightshift" x-model="shiftTime" >
-            </span>
+                <h2 style="text-align: center;">Calculating travelling costs</h2>
+                <p>
+                    The transport fees for health care workers vary based on the commencement time of their shifts
+                </p>
+                <div style="background-color: gray; color: white; padding: 0.5em; ">
+                    <strong><span>Transport fee: </span></strong>
+                    <span x-text="fare"></span>
+                </div>
+                <br>
+                <button @click="calculateFare">Calculate Fare</button><br>
+                <span>
+
+                    <label for="morningShift">Morning Shift</label>
+                    <input type="radio" name="morningShift" value="morning" id="morningShift" x-model="shiftTime">
+
+                    <label for="afternoonShift">Afternoon Shift</label>
+                    <input type="radio" name="afternoonShift" value="afternoon" id="afternoonShift" x-model="shiftTime">
+
+                    <label for="nightShift">Night Shift</label>
+                    <input type="radio" name="nightShift" id="nightShift" value="nightshift" x-model="shiftTime">
+                </span>
             </div>
         </div>
 
@@ -106,12 +108,12 @@
                 <h2 style="text-align: center;">Calculating the total phone bill</h2>
                 <p>Calculate the total amount of money spent on outbound calls and messages </p>
                 <div style="background-color: gray; color: white; padding: 0.5em;">
-                     <strong><span>Your total phone bill is: </span></strong><span x-text="bill"></span>
+                    <strong><span>Your total phone bill is: </span></strong><span x-text="bill"></span>
                 </div>
                 <br>
                 <input type="text" x-model="sentItems" placeholder="Enter sms, call, sms...">
                 <button @click="billTotal()">Calculate total bill</button>
-    
+
             </div>
         </div>
 
@@ -126,26 +128,27 @@
             }">
                 <h2 style="text-align: center;">Calculating if there is enough airtime</h2>
                 <!--enoughAirtime(usageOfAirtime, availableAirtime)-->
-                <p>Calculate how much airtime you will have remaining after outbound calls and messages by entering your current balance & desired cellular activity</p>
+                <p>Calculate how much airtime you will have remaining after outbound calls and messages by entering your
+                    current balance & desired cellular activity</p>
                 <div style="background-color: gray; color: white; padding: 0.5em;">
-                   <strong><span>Your available airtime is: </span></strong> <span x-text="calculate"></span>
+                    <strong><span>Your available airtime is: </span></strong> <span x-text="calculate"></span>
                 </div>
                 <br>
                 <input type="text" name="" id="" placeholder="Enter sms, call, data..." x-model="usageOfAirtime">
                 <input type="number" name="" id="" placeholder="Enter available airtime..." x-model="availableAirtime">
-    
+
                 <button @click="endCalculation()">Calculate Airtime</button>
-            <br>
+                <br>
             </div>
         </div>
 
 
-        
 
 
-</div>
 
-<br> <br> <br>
+    </div>
+
+    <br> <br> <br>
 
 </body>
 <footer class="shadow-sm p-3 mb-5 bg-body-tertiary">
